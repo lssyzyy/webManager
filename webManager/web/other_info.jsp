@@ -12,12 +12,7 @@
 <%@ page import="java.sql.ResultSet" %>
 <html>
 <head>
-    <link type="text/css" rel="stylesheet" href="package/css/H-ui.css" />
-    <link type="text/css" rel="stylesheet" href="package/css/H-ui.admin.css" />
-    <link rel="stylesheet" type="text/css"
-          href="http://cdn.datatables.net/1.10.13/css/jquery.dataTables.css">
-    <link type="text/css" rel="stylesheet"
-          href="package/font/font-awesome.min.css" />
+    <script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
     <title>Title</title>
 </head>
 <body>

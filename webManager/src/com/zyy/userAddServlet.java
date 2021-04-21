@@ -42,17 +42,6 @@ public class userAddServlet extends HttpServlet {
                     request.getRequestDispatcher("add_user_failure.jsp").forward(request, response);
                 }
             }
-            if (action.equals("deleteusers")) {
-                String id=request.getParameter("sta_id");
-                System.out.println(id);
-                boolean judge=deleteUsers(Integer.parseInt(id));
-                if (!judge) {
-                    request.getRequestDispatcher("delete_admin_failure.jsp").forward(request, response);
-                }
-                else {
-                    System.out.println("成功删除");
-                }
-            }
         }
     }
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

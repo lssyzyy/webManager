@@ -12,12 +12,7 @@
 <%@ page import="java.sql.ResultSet" %>
 <html>
 <head>
-    <link type="text/css" rel="stylesheet" href="package/css/H-ui.css" />
-    <link type="text/css" rel="stylesheet" href="package/css/H-ui.admin.css" />
-    <link rel="stylesheet" type="text/css"
-          href="http://cdn.datatables.net/1.10.13/css/jquery.dataTables.css">
-    <link type="text/css" rel="stylesheet"
-          href="package/font/font-awesome.min.css" />
+    <script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
     <title>Title</title>
 </head>
 <body>
@@ -36,7 +31,7 @@
         <td class="td-head">用户性质</td>
         <td class="td-head">管理</td>
         <td class="td-head">
-            <input type="submit" value="添加用户数据" onclick="user_add('550','','添加用户','user_add_info.jsp')">
+            <input type="submit" value="添加用户数据">
         </td>
     </tr>
     <div id="all_light">
@@ -143,10 +138,3 @@
         }
     }
 </script>
-<script type="text/javascript" src="package/js/pagenav.cn.js"></script>
-<script type="text/javascript" src="package/js/H-ui.js"></script>
-<script type="text/javascript"
-        src="package/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="package/js/H-ui.admin.js"></script>
-<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
-<script type="text/javascript" src="package/layer/layer.min.js"></script>

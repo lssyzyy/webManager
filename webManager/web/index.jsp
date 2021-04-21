@@ -55,7 +55,7 @@
 
     <main>
       <header>
-        <%=title%>&nbsp;<a href="login.jsp" title="退出">退出</a>
+        <%=title%><a href="login.jsp" title="退出">退出</a>
       </header>
       <section>
         <div id="content"></div>

@@ -50,8 +50,7 @@ public class RegisterServlet extends HttpServlet {
 			UserDao dao=new UserDao();
 			if (dao.addUsersfromregister(users)) {
 				request.getRequestDispatcher("registerok.jsp").forward(request, response);
-			}
-			else{
+			}else{
 				request.getRequestDispatcher("register_failure2.jsp").forward(request, response);
 			}
 		}
