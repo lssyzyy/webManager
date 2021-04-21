@@ -12,13 +12,13 @@ import java.io.IOException;
 import java.sql.*;
 
 @WebServlet("/ServletForGETMethod")
-public class servlet extends HttpServlet {
+public class userAppResGetServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public servlet() {
+    public userAppResGetServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -34,10 +34,11 @@ public class servlet extends HttpServlet {
         Connection conn = null;
         try {
             conn = DBUtil.getConnection();
-            String sql="insert into pet_user (username,userpassword) values(?,?)";
+            String sql="insert into pet_user (username,userpassword,status) values(?,?,?)";
             PreparedStatement st = conn.prepareStatement(sql);
             st.setString(1,name);
             st.setString(2,pwd);
+            st.setString(3,"普通用户");
             st.executeUpdate();
         } catch (SQLException throwables) {
             throwables.printStackTrace();

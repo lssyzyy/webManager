@@ -1,7 +1,8 @@
 <%@ page import="java.sql.Connection" %>
 <%@ page import="com.zyy.util.DBUtil" %>
 <%@ page import="java.sql.Statement" %>
-<%@ page import="java.sql.ResultSet" %><%--
+<%@ page import="java.sql.ResultSet" %>
+<%@ page import="com.zyy.bean.BeanUser" %><%--
   Created by IntelliJ IDEA.
   User: MACHENIKE
   Date: 2021/4/5
@@ -12,10 +13,14 @@
 <html>
   <head>
     <script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
-    <title>title</title>
+    <title>宠物后台管理系统</title>
   </head>
   <body>
-
+  <%
+    BeanUser a = (BeanUser) request.getAttribute("users");
+    String title = a.getStatus() + "：" + a.getUsername();
+    String status = a.getStatus();
+  %>
   <div class="wrapper">
     <!-- 侧边栏 -->
     <nav id="nav">
@@ -41,7 +46,7 @@
         <li data-id="otherinfo">
           <div class="nav-menu-item">
             <i class="icon"></i>
-              <span class="title">菜单3</span>
+              <span class="title">其他信息</span>
             <i class="icon"></i>
           </div>
         </li>
@@ -50,7 +55,7 @@
 
     <main>
       <header>
-        信息显示
+        <%=title%>&nbsp;<a href="login.jsp" title="退出">退出</a>
       </header>
       <section>
         <div id="content"></div>
@@ -69,11 +74,6 @@
     width: 100%;
     height: 100%;
   }
-  button{
-    background-color: transparent;
-    border: 0;
-    outline: none;
-  }
   /* 滚动条 */
   .wrapper {
     height: 100%;
@@ -81,13 +81,12 @@
   }
   /* 头部 */
   header {
+    line-height: 40px;
     text-align: center;
     border-bottom: 0.8px solid black;
     height: 40px;
-    line-height: 40px;
     background-color: orange;
   }
-
   /* 左侧边菜单 */
   nav {
     width: 200px;

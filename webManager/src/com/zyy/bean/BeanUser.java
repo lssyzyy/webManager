@@ -2,9 +2,10 @@ package com.zyy.bean;
 
 
 public class BeanUser {
-    int userid;
-    String username;
-    String userpwd;
+    private int userid;
+    private String username;
+    private String userpwd;
+    private String status;
 
     public int getUserid() {
         return userid;
@@ -24,5 +25,11 @@ public class BeanUser {
     public void setUserpwd(String userpwd) {
         this.userpwd = userpwd;
     }
+    public String getStatus() {
+        return status;
+    }
 
+    public void setStatus(String status) {
+        this.status = status;
+    }
 }
