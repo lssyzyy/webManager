@@ -12,6 +12,7 @@
 <html>
 <head>
     <script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="package/css/H-ui.css" />
     <title>Title</title>
 </head>
 <body>
@@ -31,7 +32,10 @@
         <td class="td-head">宠物种类</td>
         <td class="td-head">宠物领养内容</td>
         <td class="td-head">宠物是否疫苗</td>
-        <td class="td-head" colspan="2">管理</td>
+        <td class="td-head">管理</td>
+        <td class="td-head">
+            <a href="pet_add_info.jsp">添加宠物信息</a>
+        </td>
     </tr>
     <% while(rs.next()){ %>
     <tr class="tr-content">

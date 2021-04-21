@@ -11,7 +11,7 @@
 <%
   String username=request.getParameter("username");
 %>
-    添加用户失败，该用户名已存在<%=username%><br>
+    添加用户失败，该用户已存在<%=username%><br>
     <a href="index.jsp">返回</a>
 </body>
 </html>

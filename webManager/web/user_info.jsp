@@ -13,6 +13,8 @@
 <html>
 <head>
     <script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+    <script type="text/javascript" src="package/js/H-ui.admin.js"></script>
+    <link type="text/css" rel="stylesheet" href="package/css/H-ui.css" />
     <title>Title</title>
 </head>
 <body>
@@ -31,7 +33,7 @@
         <td class="td-head">用户性质</td>
         <td class="td-head">管理</td>
         <td class="td-head">
-            <input type="submit" value="添加用户数据">
+            <a href="user_add_info.jsp">添加用户数据</a>
         </td>
     </tr>
     <div id="all_light">

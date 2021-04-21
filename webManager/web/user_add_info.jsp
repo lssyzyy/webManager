@@ -8,7 +8,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>添加车站</title>
+    <script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+    <script type="text/javascript" src="package/js/H-ui.admin.js"></script>
+    <link type="text/css" rel="stylesheet" href="package/css/H-ui.css" />
+    <title>添加用户</title>
 </head>
 <body>
 <script type="text/javascript">
@@ -32,7 +35,7 @@
 </script>
 <div class="pd-20">
     <div class="Huiform">
-        <form action="${pageContext.request.contextPath}/userAddServlet?action=addUser" method="post" onsubmit="return check()" target="_parent">
+        <form action="${pageContext.request.contextPath}/userAddServlet" method="post" onsubmit="return check()" target="_parent">
             <table class="table table-bg">
                 <tbody>
                 <tr>
@@ -41,12 +44,19 @@
                 </tr>
                 <tr>
                     <th width="100" class="text-r"><span class="c-red">*</span> 密码：</th>
-                    <td><input type="text" style="width:300px" class="input-text"  id="add_pwd" name="add_pwd"></td>
+                    <td><input type="text" style="width:300px" placeholder="请输入密码..." class="input-text"  id="add_pwd" name="add_pwd"></td>
                 </tr>
                 <tr>
                     <th width="100" class="text-r"><span class="c-red">*</span> 用户性质：</th>
-                    <td><input type="text" style="width:300px" class="input-text"  id="add_stus" name="add_stus"></td>
+                    <td>
+                        <select class="select" id="add_stus" name="add_stus">
+                            <option value="信息管理员">信息管理员</option>
+                            <option value="普通用户">普通用户</option>
+                        </select>
+                    </td>
                 </tr>
+
+
                 <tr>
                     <td><button class="btn btn-success radius" type="submit" >确定</button></td>
                 </tr>
@@ -55,7 +65,5 @@
         </form>
     </div>
 </div>
-<script type="text/javascript" src="package/js/jquery.min.js"></script>
-<script type="text/javascript" src="package/layer/layer.min.js"></script>
 </body>
 </html>

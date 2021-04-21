@@ -46,7 +46,6 @@ public class LoginServlet extends HttpServlet {
         users.setUserpwd(password);
         if (!isQuery(users).equals("false")) {
             users.setStatus(isQuery(users));
-            request.setAttribute("users", users);
             request.getRequestDispatcher("index.jsp").forward(request, response);
         }
         else {

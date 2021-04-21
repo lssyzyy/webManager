@@ -11,7 +11,8 @@
 <%
   String username=request.getParameter("username");
 %>
-    注册失败，该用户名已存在<%=username%><br>
+    注册失败，该用户名已存在<br>
+    用户名为：<%=username%><br>
     <a href="register.jsp">返回注册页面</a>
 </body>
 </html>

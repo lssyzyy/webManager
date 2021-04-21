@@ -16,11 +16,6 @@
     <title>宠物后台管理系统</title>
   </head>
   <body>
-  <%
-    BeanUser a = (BeanUser) request.getAttribute("users");
-    String title = a.getStatus() + "：" + a.getUsername();
-    String status = a.getStatus();
-  %>
   <div class="wrapper">
     <!-- 侧边栏 -->
     <nav id="nav">
@@ -55,7 +50,7 @@
 
     <main>
       <header>
-        <%=title%><a href="login.jsp" title="退出">退出</a>
+        信息管理：<a href="login.jsp" title="退出">退出</a>
       </header>
       <section>
         <div id="content"></div>
@@ -177,10 +172,6 @@
         case "#petinfo":
           pathn = "pet_info.jsp";
           i = 1;
-          break;
-        case "#otherinfo":
-          pathn = "other_info.jsp";
-          i = 2;
           break;
         default:
           pathn = "user_info.jsp";

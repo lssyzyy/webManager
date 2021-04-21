@@ -35,6 +35,33 @@ public class UserDao {
 			e.printStackTrace();
 		}
 		return false;
+	}public boolean addUsersfromindex(BeanUser users){
+		try {
+			UserDao dao=new UserDao();
+			List<BeanUser> users1=dao.queryAll();
+			for(int i=0;i<users1.size();i++){
+				if(users1.get(i).getUsername().equals(users.getUsername())){
+					return false;
+				}
+			}
+			Connection conn= DBUtil.getConnection();
+			String sql="insert into pet_user(username,userpassword,status) "+
+			"values(?,?,?);";
+			PreparedStatement ptmt=conn.prepareStatement(sql);
+			ptmt.setString(1, users.getUsername());
+			ptmt.setString(2, users.getUserpwd());
+			ptmt.setString(3, users.getStatus());
+			ptmt.execute();
+
+			return true;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return false;
 	}
 	public boolean delUsers(int id) {
 		try {
