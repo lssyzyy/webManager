@@ -32,6 +32,31 @@ public class PetDao {
 		}
 		return false;
 	}
+	public boolean updatePets(BeanPet pets){
+		try {
+			Connection conn=DBUtil.getConnection();
+			String sql="update pet_info set petimg=?,pettitle=?,petprice=?,pettopic=?,petcontent=?,petyimiao=?"
+					+" where petid=?";
+			PreparedStatement ptmt=conn.prepareStatement(sql);
+			ptmt.setString(1, "暂无");
+			ptmt.setString(2, pets.getPettitle());
+			ptmt.setString(3, pets.getPetprice());
+			ptmt.setString(4, pets.getPettopic());
+			ptmt.setString(5, pets.getPetcontent());
+			ptmt.setString(6, pets.getPetyimiao());
+			ptmt.setInt(7, pets.getPetid());
+			ptmt.execute();
+			return true;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return false;
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return false;
+	}
 	public boolean delPets(int id) {
 		try {
 			Connection conn=DBUtil.getConnection();

@@ -38,13 +38,6 @@
             <i class="icon"></i>
           </div>
         </li>
-        <li data-id="otherinfo">
-          <div class="nav-menu-item">
-            <i class="icon"></i>
-              <span class="title">其他信息</span>
-            <i class="icon"></i>
-          </div>
-        </li>
       </ul>
     </nav>
 

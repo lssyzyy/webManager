@@ -44,15 +44,7 @@
         <td class="td-content"><% out.print(rs.getString(2)); %></td>
         <td class="td-content"><% out.print(rs.getString(3)); %></td>
         <td class="td-content"><% out.print(rs.getString(4)); %></td>
-        <td class="td-content">
-            <form action="${pageContext.request.contextPath}/userUpdateServlet" method="post">
-                <input type="hidden" name="username" value="<%=rs.getString(2)%>">
-                <label>
-                    密码修改：<input id="passwd" type="text" name="userpassword" size="8">
-                </label>
-                <input class="upd" type="submit" value="修改" onclick="return userpassw()">
-            </form>
-        </td>
+        <td class="td-content"><a href="user_update_info.jsp?id=<%=rs.getString(1)%>&name=<%=rs.getString(2)%>&pwd=<%=rs.getString(3)%>">修改</a></td>
         <td class="td-content"><input class="del" type="button" value="删除" onclick="userdelete(<%=rs.getString(1)%>)"></td>
     </tr>
     <% } %>

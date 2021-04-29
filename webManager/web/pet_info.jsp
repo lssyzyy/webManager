@@ -26,7 +26,7 @@
 <table border="1">
     <tr class="tr-head">
         <td class="td-head">宠物编号</td>
-        <td class="td-head">宠物图片url</td>
+        <td class="td-head">宠物图片</td>
         <td class="td-head">宠物标题</td>
         <td class="td-head">宠物价格</td>
         <td class="td-head">宠物种类</td>
@@ -46,7 +46,7 @@
         <td class="td-content"><% out.print(rs.getString(5)); %></td>
         <td class="td-content"><% out.print(rs.getString(6)); %></td>
         <td class="td-content"><% out.print(rs.getString(7)); %></td>
-        <td class="td-content"><input class="upd" type="submit" value="修改"></td>
+        <td class="td-content"><a href="pet_update_info.jsp?id=<%=rs.getString(1)%>&img=<%=rs.getString(2)%>&title=<%=rs.getString(3)%>&price=<%=rs.getString(4)%>&topic=<%=rs.getString(5)%>&content=<%=rs.getString(6)%>">修改</a></td>
         <td class="td-content"><input class="del" type="button" value="删除" onclick="petdelete(<%=rs.getString(1)%>)"></td>
     </tr>
     <% } %>
